@@ -277,3 +277,26 @@ a {
         font-size: 1.5rem;
     }
 }
+
+/* Cards */
+
+.card {
+    border-radius: 7px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+    margin: 1rem;
+    overflow: hidden; /* Allows the box to have the border radius independent from the overflow */
+}
+
+.card__header, .card__body {
+    padding: 2rem 3rem ;
+}
+
+.card--primary .card__header {
+    background: var(--color-primary);
+    color: white;
+}
+
+.card--secondary .card__header {
+    background: var(--color-secondary);
+    color: white;
+}
