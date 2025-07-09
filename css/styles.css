@@ -299,6 +299,13 @@ a {
     margin: 4px;
 }
 
+.btn .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+    vertical-align: middle;
+}
+
 @media screen and (min-width: 1024px) {
     .input {
         font-size: 1.5rem;
@@ -327,11 +334,19 @@ a {
     color: white;
 }
 
+.card--primary .badge--primary {
+    background: #126de4;
+}
+
 .card--secondary .badge--secondary {
     background: #02cdf1;
 }
 
 /* Plans */
+
+.plan {
+    transition: transform .2s ease-out ;
+}
 
 .plan__name {
     color: #fff;
@@ -364,6 +379,10 @@ a {
     margin-bottom: 2rem;
 }
 
+.plan--popular {
+    transform: scale(1.1);
+}
+
 .plan--popular .card__header {
     position: relative;
 }
@@ -377,6 +396,15 @@ a {
     right: 5%;
 
 }
+
+.plan:hover {
+    transform: scale(1.05);
+}
+.plan--popular:hover {
+    transform: scale(1.15);
+}
+
+
 
 @media screen and (min-width: 1024px) {
     .plan__name {
@@ -716,4 +744,77 @@ a {
         align-self: center;
     }
     
+}
+
+/* Domain Block */
+
+.block-domain .input-group {
+    box-shadow: 0 0 30px 20px #e6ebee;
+    border: 0;
+    max-width: 770px;
+    margin: 4rem auto;
+}
+
+.block-domain__prices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.block-domain__prices .badge {
+    font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .block-domain__prices {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+}
+
+/* Plans Block */
+
+.block-plans .grid {
+    gap: 8rem 4rem;
+}
+
+.block-plans .card {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.block-plans {
+    padding-top: 0;
+}
+
+/* Features */
+
+.feature {
+    gap: 4rem 2rem;
+    margin: 12rem 0;
+}
+
+.feature:first-of-type {
+    margin-top: 6rem;
+}
+
+.feature__heading {
+    margin: 1rem 0;
+}
+
+.feature__image {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+    .feature:nth-of-type(even) .feature__content {
+        order: 2;
+    }
+
 }
