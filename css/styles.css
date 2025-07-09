@@ -19,6 +19,11 @@
 
 /*Typography*/
 
+::selection {
+    background: var(--color-primary);
+    color: white;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -46,6 +51,7 @@ h2 {
 
 h3 {
     font-size: 3rem;
+    font-weight: 500;
 }
 
 p {
@@ -139,7 +145,6 @@ a {
 .list {
     list-style: none;
     padding-left: 0;
-    color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -150,6 +155,8 @@ a {
 .list--tick {
     list-style-image: url(../images/tick.svg);
     padding-left: 3rem;
+    color: var(--color-headings);
+
 }
 
 .list--tick .list__item {
@@ -428,6 +435,7 @@ a {
 
 .media {
     display: flex;
+    margin-bottom: 4rem;
 }
 
 .media__title {
@@ -638,17 +646,19 @@ a {
     color: #7b858b;
 }
 
-.block--dark .block__heading {
+.block--dark h1, 
+.block--dark h2, 
+.block--dark h3 {
     color: #fff;
 }
 
 .block--skewed-right {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
     padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
 .block--skewed-left {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
     padding-bottom: calc(var(--padding-vertical) + 4rem);
 }
 
@@ -727,10 +737,6 @@ a {
     
 .hero__image {
     width: 100%;
-}
-
-.hero {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 @media screen and (min-width: 768px) {
@@ -817,4 +823,22 @@ a {
         order: 2;
     }
 
+}
+
+/* Showcase */
+
+.block-showcase__image {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+    .block-showcase .grid {
+        grid-template-columns: 50% 50%;
+    }
+    .block-showcase__image {
+        width: auto;
+        max-width: 700px;
+        justify-self: end;
+    }
 }
